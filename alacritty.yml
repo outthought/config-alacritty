@@ -390,7 +390,7 @@ hints:
         key: L
         mods: Control|Shift
     # Ctrl-Shift-U hints matches for copy.
-    - regex: '([0-9a-f]{12,128})|([[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3})'
+    - regex: '([0-9a-f]{12,128})|([[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3})|(i-[0-9a-f]{17})'
       action: Copy
       post_processing: false
       binding:
