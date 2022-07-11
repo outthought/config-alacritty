@@ -228,44 +228,32 @@ font:
 #     white:   '0xbbc2cf'
 # scorcerer colors
 colors:
-
   # Default colors
   primary:
-    background: '#282828'
-    foreground: '#fdf4c1'
+    background: '0x1b182c'
+    foreground: '0xcbe3e7'
 
   # Normal colors
   normal:
-    black: '#282828'
-    red: '#9d0006'
-    green: '#79740e'
-    yellow: '#b57614'
-    blue: '#076678'
-    magenta: '#8f3f71'
-    cyan: '#00a7af'
-    white: '#fdf4c1'
+    black: '0x100e23'
+    red: '0xff8080'
+    green: '0x95ffa4'
+    yellow: '0xffe9aa'
+    blue: '0x91ddff'
+    magenta: '0xc991e1'
+    cyan: '0xaaffe4'
+    white: '0xcbe3e7'
 
   # Bright colors
   bright:
-    black: '#32302f'
-    red: '#fb4933'
-    green: '#b8bb26'
-    yellow: '#fabd2f'
-    blue: '#83a598'
-    magenta: '#d3869b'
-    cyan: '#3fd7e5'
-    white: '#ffffc8'
-
-  # Dim colors (Optional)
-  dim:
-    black: '#1d2021'
-    red: '#421e1e'
-    green: '#232b0f'
-    yellow: '#4d3b27'
-    blue: '#2b3c44'
-    magenta: '#4e3d45'
-    cyan: '#205161'
-    white: '#f4e8ba'
+    black: '0x565575'
+    red: '0xff5458'
+    green: '0x62d196'
+    yellow: '0xffb378'
+    blue: '0x65b2ff'
+    magenta: '0x906cff'
+    cyan: '0x63f2f1'
+    white: '0xa6b3cc'
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
@@ -379,8 +367,8 @@ hints:
   #       Move the vi mode cursor to the beginning of the hint.
   enabled:
     # Ctrl-Shift-L hints URLs to open.
-    - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
-              [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+    - regex: "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|g\
+        it:|ssh:|ftp:)[^\0-\x1f-<>\"\\s{-}\\^⟨⟩`]+"
       command: open
       post_processing: true
       mouse:
@@ -388,14 +376,14 @@ hints:
         mods: None
       binding:
         key: L
-        mods: Control|Shift
+        mods: Control|Option|Shift
     # Ctrl-Shift-U hints matches for copy.
     - regex: '([0-9a-f]{12,128})|([[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3}\.[[:digit:]]{1,3})|(i-[0-9a-f]{17})'
       action: Copy
       post_processing: false
       binding:
         key: U
-        mods: Control|Shift
+        mods: Control|Option|Shift
 
 # Mouse bindings
 #
